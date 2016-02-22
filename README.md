@@ -1,5 +1,5 @@
 XMOS_gigabit_tcp_reflect
-.....................................
+================================
 
 :Latest release: v0.1
 :Maintainer: Carlos Minamisava Faria
