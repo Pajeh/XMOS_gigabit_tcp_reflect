@@ -4,7 +4,6 @@
 #include <xtcp.h>
 #include <string.h>
 #include <print.h>
-#include "commen.h"
 
 // Defines
 #define RX_BUFFER_SIZE 1400
@@ -14,11 +13,6 @@
 #define ETHERNET_SMI_PHY_ADDRESS (0)
 
 enum flag_status {TRUE=1, FALSE=0};
-
-interface my_interface
-{
-    void rgbValues(char x[],int length);
-};
 
 void udp_handle(chanend c_xtcp,
                 client interface my_interface rgb_interface,

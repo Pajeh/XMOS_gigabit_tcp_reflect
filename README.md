@@ -1,4 +1,4 @@
-XMOS_gigabit_tcp_reflect
+XMOS Gigabit tcp reflect
 ================================
 
 :Latest release: v0.1
