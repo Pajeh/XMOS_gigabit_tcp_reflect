@@ -14,10 +14,7 @@
 
 enum flag_status {TRUE=1, FALSE=0};
 
-void udp_handle(chanend c_xtcp,
-                client interface my_interface rgb_interface,
-                client interface myethernetdata_interface ethernetdata_interface[],
-                unsigned n);
+void udp_handle(chanend c_xtcp);
 
 
 #endif // __udp_reflect_h__

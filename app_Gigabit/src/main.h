@@ -3,8 +3,6 @@
 #include <platform.h>
 #include <xtcp.h>
 #include "udp_reflect.h"
-#include "signals.h"
-#include "commen.h"
 
 // Defines
 #define ETHERNET_SMI_PHY_ADDRESS (0)

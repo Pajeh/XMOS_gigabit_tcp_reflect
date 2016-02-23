@@ -135,7 +135,7 @@ int main(void)
                 otp_ports,
                 ipconfig);
         // The simple udp reflector thread
-        on tile[0]: udp_handle(c_xtcp[0],rgb_interface, ethernetdata_interface,DATAINTERFACES);
+        on tile[0]: udp_handle(c_xtcp[0]);
         on tile[0]: led_control(rgb_interface, leds);
 
 
