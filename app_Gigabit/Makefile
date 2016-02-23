@@ -6,7 +6,7 @@ TARGET = XCORE-200-EXPLORER
 # The APP_NAME variable determines the name of the final .xe file. It should
 # not include the .xe postfix. If left blank the name will default to
 # the project name
-APP_NAME = Test_GigaBit
+APP_NAME = Gigabit
 
 # The USED_MODULES variable lists other module used by the application.
 USED_MODULES = lib_ethernet lib_gpio lib_locks lib_logging lib_otpinfo lib_xassert lib_xtcp

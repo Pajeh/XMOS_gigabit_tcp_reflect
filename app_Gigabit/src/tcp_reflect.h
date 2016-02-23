@@ -14,7 +14,8 @@
 
 enum flag_status {TRUE=1, FALSE=0};
 
-void udp_handle(chanend c_xtcp);
+
+void tcp_handle(chanend c_xtcp);
 
 
 #endif // __udp_reflect_h__

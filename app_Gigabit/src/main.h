@@ -2,7 +2,9 @@
 #include <xs1.h>
 #include <platform.h>
 #include <xtcp.h>
-#include "udp_reflect.h"
+#include "tcp_reflect.h"
+
+//#define DEBUG 0
 
 // Defines
 #define ETHERNET_SMI_PHY_ADDRESS (0)

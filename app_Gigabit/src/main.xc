@@ -68,43 +68,8 @@ xtcp_ipconfig_t ipconfig = {
     }
 }
 
-
-int chartoint(char x)
-{
-    return (int)x-48;
-}
-[[combinable]]
- void led_control(server interface my_interface rgb_interface, port leds)
-{
-    char temp [RX_BUFFER_SIZE];
-    while(1)
-    {
-        select
-        {
-        case rgb_interface.rgbValues(char message[],int length):
-                        for (int i = 0; i < length; ++i)
-                        {
-                            temp[i] = message[i];
-                        }
-        temp[length] = 0;
-        if(strncmp(temp,"RGB=",4)==0 && length>=8)
-        {
-            leds <: (chartoint(temp[7])|(chartoint(temp[6])<<1)
-                    |(chartoint(temp[5])<<2)|(chartoint(temp[4])<<3));
-        } else
-        {
-            leds <: 0;
-        }
-        break;
-        }
-    }
-}
-
-
 int main(void)
 {
-    interface my_interface rgb_interface;
-    interface myethernetdata_interface ethernetdata_interface[DATAINTERFACES];
     chan c_xtcp[1];
     ethernet_cfg_if i_eth_cfg[NUM_CFG_CLIENTS];
     ethernet_rx_if i_eth_rx[NUM_ETH_CLIENTS];
@@ -135,8 +100,7 @@ int main(void)
                 otp_ports,
                 ipconfig);
         // The simple udp reflector thread
-        on tile[0]: udp_handle(c_xtcp[0]);
-        on tile[0]: led_control(rgb_interface, leds);
+        on tile[0]: tcp_handle(c_xtcp[0]);
 
 
 
